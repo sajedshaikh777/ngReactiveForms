@@ -38,9 +38,9 @@ export class PaymentComponent implements OnInit {
     this.items.push(this.createItem());
   }
 
-  removeItem(i: number) {
-    this.items.removeAt(i);
-  }
+  // removeItem(i: number) {
+  //   this.items.removeAt(i);
+  // }
 
   onSubmit() {
     console.warn(this.paymentForm);
