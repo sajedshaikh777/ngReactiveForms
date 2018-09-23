@@ -1,0 +1,7 @@
+<form [formGroup]="paymentForm" (ngSubmit)="onSubmit()" autocomplete="off">
+  <app-name [paymentForm]="paymentForm"></app-name>
+  <app-amount [paymentForm]="paymentForm"></app-amount>
+  <app-reference [paymentForm]="paymentForm"></app-reference>
+
+  <button type="submit" class="btn btn-primary rounded-0" [disabled]="!paymentForm.valid">Submit</button>
+</form>
