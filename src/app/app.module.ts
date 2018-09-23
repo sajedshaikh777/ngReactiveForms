@@ -7,6 +7,7 @@ import { NameComponent } from '../name';
 import { PaymentComponent } from '../payment';
 import { ReferenceComponent } from '../reference';
 import { AmountComponent, CurrencyFormatterPipe, CurrencyFormatterDirective } from '../amount';
+import { DescriptionComponent } from '../description';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],
@@ -17,7 +18,8 @@ import { AmountComponent, CurrencyFormatterPipe, CurrencyFormatterDirective } fr
     ReferenceComponent,
     AmountComponent,
     CurrencyFormatterPipe,
-    CurrencyFormatterDirective
+    CurrencyFormatterDirective,
+    DescriptionComponent
   ],
   bootstrap: [AppComponent],
   exports: [CurrencyFormatterPipe, CurrencyFormatterDirective],

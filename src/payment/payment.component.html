@@ -2,6 +2,12 @@
   <app-name [paymentForm]="paymentForm"></app-name>
   <app-amount [paymentForm]="paymentForm"></app-amount>
   <app-reference [paymentForm]="paymentForm"></app-reference>
+  <app-description [paymentForm]="paymentForm" [items]="items"></app-description>
+  <div class="add-control">
+    <button type="submit" class="btn" (click)="addItem()" *ngIf="paymentForm.controls.items.length < 3">
+      Add
+    </button>
+  </div>
 
   <button type="submit" class="btn btn-primary rounded-0" [disabled]="!paymentForm.valid">Submit</button>
 </form>

@@ -1,0 +1,15 @@
+<div [formGroup]="paymentForm">
+	<div formArrayName="items" *ngFor="let item of paymentForm.get('items').controls; let i = index;">
+		<h5>Form Array {{i + 1}}</h5>
+		<div [formGroupName]="i">
+			<label for="description">Description</label>
+			<input formControlName="description" type="text" id="description" class="description">
+
+			<div class="remove-control">
+				<button type="submit" class="btn" (click)="removeItem(i)" *ngIf="paymentForm.controls.items.length > 1">
+					Remove {{i+1}}
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
