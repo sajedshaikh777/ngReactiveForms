@@ -10,18 +10,12 @@ import { PanelStateConstant } from './utils/utils.constants';
 })
 export class AppComponent implements OnInit {
 
-  public stepIndicator: any;
-
-  /**
-   * Panel state constants
-   */
   public createPanel: String = 'txCreate';
   public reviewPanel: String = 'txReview';
   public confirmPanel: String = 'txConfirm';
-
   public STEPS: any;
   public mainStep: any;
-
+  public stepIndicator: any;
 
   public paymentForm: FormGroup;
 
