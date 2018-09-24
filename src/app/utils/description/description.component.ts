@@ -8,14 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 export class DescriptionComponent implements OnInit {
 
   @Input('paymentForm') paymentForm: any;
-  @Input('items') items: any;
+  @Input('payments') payments: any;
 
   constructor() { }
 
   ngOnInit() { }
 
   removeItem(i: number) {
-    this.items.removeAt(i);
+    this.payments.removeAt(i);
   }
 
 }

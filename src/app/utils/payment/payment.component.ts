@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
 export class PaymentComponent implements OnInit {
 
   public paymentForm: any;
-  items: FormArray;
+  payments: FormArray;
 
   constructor(private fb: FormBuilder) { }
 
@@ -18,32 +18,32 @@ export class PaymentComponent implements OnInit {
     this.paymentForm = this.fb.group({
       name: ['', Validators.required],
       payment: this.fb.group({
-        amount: ['', [Validators.required, Validators.pattern('^[0-9,.]+$')]],
         reference: ['']
       }),
 
-      items: this.fb.array([this.createItem()])
+      payments: this.fb.array([this.createPayment()])
     });
 
   }
 
-  createItem(): FormGroup {
+  createPayment(): FormGroup {
     return this.fb.group({
-      description: ['', Validators.required]
+      amount: ['', [Validators.required, Validators.pattern('^[0-9,.]+$')]]
+      // description: ['', Validators.required]
     });
   }
 
-  addItem(): void {
-    this.items = this.paymentForm.get('items') as FormArray;
-    this.items.push(this.createItem());
+  addPayment(): void {
+    this.payments = this.paymentForm.get('payments') as FormArray;
+    this.payments.push(this.createPayment());
   }
 
   // removeItem(i: number) {
-  //   this.items.removeAt(i);
+  //   this.payments.removeAt(i);
   // }
 
   onSubmit() {
-    console.warn(this.paymentForm);
+    // console.warn(this.paymentForm);
   }
 
 }

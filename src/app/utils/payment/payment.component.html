@@ -1,13 +1,14 @@
 <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()" autocomplete="off">
   <app-name [paymentForm]="paymentForm"></app-name>
-  <app-amount [paymentForm]="paymentForm"></app-amount>
   <app-reference [paymentForm]="paymentForm"></app-reference>
-  <app-description [paymentForm]="paymentForm" [items]="items"></app-description>
+
+  <!-- <app-payments-array [paymentForm]="paymentForm" [payments]="payments"></app-payments-array> -->
+  <!-- 
   <div class="add-control">
-    <button type="submit" class="btn" (click)="addItem()" *ngIf="paymentForm.controls.items.length < 3">
+    <button type="submit" class="btn" (click)="addPayment()" *ngIf="paymentForm.controls.payments.length < 3">
       Add
     </button>
-  </div>
+  </div> -->
 
   <button type="submit" class="btn btn-primary rounded-0" [disabled]="!paymentForm.valid">Submit</button>
 </form>

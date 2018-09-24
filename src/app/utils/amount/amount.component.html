@@ -1,5 +1,5 @@
 <div [formGroup]="paymentForm">
-	<div formGroupName="payment">
+	<div formArrayName="payments">
 		<label for="amount">Amount</label>
 		<input formControlName="amount" maxlength="10" appCurrencyFormatter type="text" id="amount" class="amount">
 	</div>

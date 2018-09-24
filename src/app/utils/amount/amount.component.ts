@@ -10,9 +10,15 @@ import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
 export class AmountComponent implements OnInit {
 
   @Input('paymentForm') paymentForm: any;
+  @Input('payments') payments: any;
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+
+    // console.warn(this.paymentForm);
+    // console.warn(this.payments);
+
+  }
 
 }
